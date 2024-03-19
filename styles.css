@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -21,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     width: 100%;
     height: auto;
     background-image: url(./assets/background.svg);
@@ -34,7 +35,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
@@ -73,7 +73,6 @@ h6 {
 p {
     display: none;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
     text-align: right;
     font-weight: 500;
     font-size: 11px;
@@ -83,7 +82,6 @@ p {
 
 span {
     color: var(--red);
-    font-family: 'Poppins', sans-serif;
     font-size: 11px;
     font-weight: 700;
     line-height: 21px;
@@ -94,6 +92,7 @@ header {
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    text-align: center;
 }
 
 main {
@@ -102,11 +101,13 @@ main {
     width: 100%;
     gap: 24px;
     margin: 64px 0 0;
+    text-align: center;
 }
 
 .trial {
     display: flex;
     width: 100%;
+    justify-content: center;
     background-color: var(--purple);
     border-radius: 10px;
     box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
@@ -144,15 +145,13 @@ input {
     border: 1px solid #DEDEDE;
     padding: 15px 0 15px 19px;
     caret-color: var(--purple);
-    
+
 }
 
 input::placeholder,
 input[type=text],
 input[type=mail],
 input[type=password] {
-    /* caret-shape: 2px, 22px; */
-    font-family: 'Poppins', sans-serif;
     color: #3D3B48;
     font-weight: 600;
     font-size: 14px;
@@ -206,4 +205,49 @@ span:hover {
     background-image: url(./assets/error.svg);
     background-repeat: no-repeat;
     background-position: top 50% right 25px;
+}
+
+
+@media (width >=920px) {
+    body {
+        flex-direction: row;
+        padding-top: 121px;
+        align-items: start;
+        gap: 45px;
+    }
+
+    header {
+        margin-top: 169px;
+        text-align: start;
+    }
+
+    main {
+        margin-top: 0;
+    }
+}
+
+@media (width >=1300px) {
+    body {
+        padding: 121px 165px;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 55px;
+        letter-spacing: -0.5px;
+    }
+}
+
+@media (width >=1440px) {
+    body {
+        gap: 3%;
+    }
+
+    main {
+        width: 540px;
+    }
+
+    header {
+        width: 525px;
+    }
 }
