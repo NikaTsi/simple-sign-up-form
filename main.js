@@ -4,6 +4,7 @@ const mail = document.querySelector("#mail")
 const password = document.querySelector("#password")
 const repeatPassword = document.querySelector("#repeatPassword")
 const form = document.querySelector("form")
+const confirmationBtn = document.querySelector("#confirmationBtn")
 
 const nameErr = document.querySelector(".nameErr")
 const lastNameErr = document.querySelector(".lastNameErr")
@@ -14,12 +15,23 @@ const repeatPasswordErr = document.querySelector(".repeatPasswordErr")
 const lettersRegex = /^[A-Za-z\s]+$/;
 const mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-form.addEventListener("click", (e) => {
+
+confirmationBtn.addEventListener("click", (e) => {
     e.preventDefault()
     if (validationCheck()) {
         form.submit();
+        
+        let data = {
+            firstName: Name.value,
+            lastName: lastName.value,
+            email: mail.value,
+            password: password.value
+        };
+        
+        localStorage.setItem('userData', JSON.stringify(data));
     }
 });
+
 
 function validationCheck(){
     errorRemover()

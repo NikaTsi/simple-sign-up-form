@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 :root {
     --white: #fff;
     --purple: #5E54A4;
@@ -25,7 +24,7 @@ body {
     justify-content: center;
     width: 100%;
     height: auto;
-    background-image: url(./assets/background.svg);
+    background-image: url(../assets/background.svg);
     padding: 88px 24px 68px;
 }
 
@@ -202,11 +201,28 @@ span:hover {
 }
 
 .err-img {
-    background-image: url(./assets/error.svg);
+    background-image: url(../assets/error.svg);
     background-repeat: no-repeat;
     background-position: top 50% right 25px;
 }
 
+
+.confirmationBox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    gap: 32px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirmationBox h1{
+    color: var(--input);
+}
 
 @media (width >=920px) {
     body {
@@ -235,6 +251,11 @@ span:hover {
         font-size: 50px;
         line-height: 55px;
         letter-spacing: -0.5px;
+    }
+
+    .confirmationBox{
+        width: 650px;
+        padding: 40px;
     }
 }
 
